@@ -30,16 +30,16 @@ html
           nav#navigation 
             ul
               li
-                = link_to "Dashboard"
+                = link_to "Dashboard", root_path
               li
-                a Orders
+                = link_to "Orders", orders_path
               li
-                a href="#" Quotes 
+                = link_to "Quotes", quotes_path
               li
-                a Products
+                = link_to "Products", products_path
               li
-                a Offers
+                = link_to "Offers", offers_path
               li
-                a Statistics    
+                = link_to "Statistics", statistics_path
         
         == yield

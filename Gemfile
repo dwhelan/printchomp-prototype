@@ -8,6 +8,7 @@ gem 'rails', '3.2.11'
 gem 'sqlite3'
 
 gem 'sass-rails',   '~> 3.2.3'
+
 gem 'bootstrap-sass', '~> 3.1.1'
 
 # Gems used only for assets and not required
@@ -40,4 +41,4 @@ gem 'jquery-rails'
 
 gem 'font-awesome-sass'
 gem 'slim'
-gem "nvd3-rails", :git => "git@github.com:adeven/nvd3-rails.git", :submodules => true
+gem 'active_link_to'

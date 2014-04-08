@@ -111,6 +111,15 @@ address {
       color: #fff;
       display: block;
       padding: 0.6em 0.4em;
+      
+      &:hover {
+        background: darken($blue-purple, 8%);
+        text-decoration: none;
+      }
+      
+      &.active {
+        background: darken($blue-purple, 8%) url("vertical-arrow.png") right no-repeat;
+      }
     }
   }
 }  

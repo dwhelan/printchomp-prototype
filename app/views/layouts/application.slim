@@ -1,0 +1,45 @@
+doctype html
+html
+  head
+    title Printchomp
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    =stylesheet_link_tag "application"
+    =javascript_include_tag "application"
+        
+  body 
+  
+    .container-fluid
+      header id="header"
+        h1 Printchomp
+      
+      section#content
+        #sidebar
+
+          .printer-info
+            .logo
+            h1 Business Ninja
+            a http://www.businessninja.com
+            
+          p.profile-completeness Profile Completeness  
+          .progress
+            .progress-bar role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"
+              span.sr-only 60% Complete
+        
+          nav#navigation 
+            ul
+              li
+                = link_to "Dashboard"
+              li
+                a Orders
+              li
+                a href="#" Quotes 
+              li
+                a Products
+              li
+                a Offers
+              li
+                a Statistics    
+        
+        == yield

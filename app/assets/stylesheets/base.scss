@@ -1,0 +1,475 @@
+body {
+  background: #fff;
+  font-family: Arial, Helvetica, Verdana, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $blue;
+}
+
+address {
+  font-size: 12px;
+  margin-bottom: 10px;
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#header {
+  background: $blue;
+  color: #fff;
+  @include make-row();
+  padding: 0.4em;
+  
+  h1 {
+    color: lighten($blue, 20%);
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0 0 0 33px;
+    padding: 0;
+  }
+}
+
+#content {
+  @include make-row();
+}
+
+  #sidebar {
+    background: $blue-purple;
+    @include make-lg-column(2);
+    @include make-md-column(2);
+    padding: 0;
+    
+    .progress {
+      background: lighten($blue-purple, 10%);
+      height: 12px;
+      margin: 0 auto 0.5em auto;
+      width: 95%;
+      
+      .progress-bar {
+        background: $blue;
+      }
+    }
+  }
+
+  #content-main {
+    @include make-lg-column(7);
+    @include make-md-column(7);
+    padding: 0;
+    
+    .alert-success {
+      border-radius: 0;
+      padding: 5px 10px;
+    }
+  }
+  
+  #content-secondary {
+    background: lighten($blue,33%);
+    @include make-lg-column(3);
+    @include make-md-column(3);
+    padding: 0;
+  }
+  
+  #tertiary {
+    #content-main {
+      @include make-md-column(5);
+      padding: 0;
+    }
+
+    #content-secondary {
+      @include make-md-column(3);
+      padding: 0;
+    }
+    
+    #content-tertiary {
+      background: lighten($blue,36%);
+      @include make-md-column(2);
+      padding: 0;
+    } 
+    
+    h2 {
+      color: $blue;
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+  
+#navigation {
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; 
+    
+    a {
+      border-bottom: 1px solid #6b7383;
+      color: #fff;
+      display: block;
+      padding: 0.6em 0.4em;
+    }
+  }
+}  
+
+
+.printer-info {
+  margin-bottom: 1.0em;
+  
+  .logo {
+    border: 5px solid lighten($blue-purple, 20%);
+    border-radius: 200px;
+    height: 75px;
+    margin: 1.0em auto 0.5em auto;
+    width: 75px;
+  }
+  
+  h1 {
+    color: lighten($blue-purple, 20%);
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  a {
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+.h1-header-main {
+  h1 {
+    border-bottom: 1px solid lighten($blue, 33%);
+    color: $blue-purple;
+    font-size: 18px;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  &.border-top {
+    border-top: 1px solid lighten($blue, 33%);
+  }
+}
+
+.h1-header-secondary {
+  h1 {
+    border-bottom: 1px solid lighten($blue, 22%);
+    color: $blue-purple;
+    font-size: 18px;
+    margin: 0;
+    padding: 10px;
+  }
+}
+
+.h1-header-tertiary {
+  h1 {
+    border-bottom: 1px solid lighten($blue, 22%);
+    color: $blue-purple;
+    font-size: 18px;
+    margin: 0;
+    padding: 10px;
+  }
+}
+
+.tabs {
+  background: lighten($blue, 25%);
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+    
+  li {
+    display: inline;
+    list-style: none;
+    margin-right: 25px;
+    
+    
+    &.active {
+      a {
+        background: url("horizontal-arrow.png") bottom no-repeat;
+        color: $blue-purple;
+      }
+    }
+    
+    &:hover {
+    }
+    
+    a {
+      color: $blue;
+      padding: 13px 10px;
+      text-decoration: none;
+      
+      &:hover {
+        background: url("horizontal-arrow.png") bottom no-repeat;
+        color: $blue-purple;
+      }
+    }
+  }
+}
+
+.tab-content {
+  padding: 10px;
+  
+  &.no-padding {
+    padding: 0;
+  }
+}
+
+table {
+  width: 100%;
+
+  tr {
+    border-bottom: 1px solid lighten($blue, 33%);
+  
+    td {
+      padding: 10px;
+      
+      .td-label {
+        color: lighten($blue-purple, 35%);
+      }
+      
+    }
+  }
+}
+
+.msg {
+  border-bottom: 1px solid lighten($blue, 22%);
+  padding: 10px;
+  position: relative;
+  
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .from,
+  .id,
+  .time {
+    color: $blue-purple;
+    font-size: 12px;
+  }
+  
+  .id,
+  .time {
+    color: lighten($blue-purple, 25%);
+  }
+  
+  .time {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+  }
+  
+  .link {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  
+}
+
+.msg-toggle {
+  background: #fff;
+  border-bottom: 1px solid lighten($blue, 22%);
+  
+  .nav > li > a {
+    color: $blue;
+    padding-left: 10px;
+  }
+  
+  .nav > li > a:hover, 
+  .nav > li > a:focus {
+    background: $blue-purple;
+    color: #fff;
+  }
+}
+
+.stats-img {
+  width: 99%;
+}
+
+.profile-completeness {
+  color: lighten($blue-purple, 20%);
+  font-size: 12px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.badge {
+  background: $red;
+}
+
+.details-row {
+  border-bottom: 1px solid lighten($blue, 33%);
+  @include make-row();
+  margin: 0;
+  
+  .details-label {
+    color: lighten($blue-purple, 20%);
+    font-weight: normal;
+    @include make-md-column(5);
+    margin: 0;
+    padding: 10px;
+    text-align: left;
+    
+    &.working-on-it {
+      padding-top: 15px;
+    }
+  }
+
+  .details-desc {
+    @include make-md-column(5);
+    margin: 0;
+    padding: 10px;
+    
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+  
+.warning {
+  color: $red;
+}  
+
+.response {
+  padding: 10px;
+  
+  label {
+    color: $blue-purple;
+    font-weight: normal;
+  }
+  
+  input {
+    border: 1px solid $blue;
+  }
+}
+
+.btn-green {
+  background: $green;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  margin: 0 auto;
+  padding: 8px 25px;
+  
+  &:hover {
+    background: $blue;
+    color: #fff;
+  }
+}
+
+.btn-red {
+  background: $red;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  margin: 0 auto;
+  padding: 8px 25px;
+  
+  &:hover {
+    background: $blue;
+  }
+}
+
+.modal-header {
+  background: lighten($blue, 33%);
+  border-bottom: 1px solid $blue;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: $blue;
+  padding: 5px 10px;
+  
+  .close {
+    margin-top: 10px;
+  }
+}
+
+.modal-body {
+  padding: 10px;
+}
+
+.modal-footer {
+  background: #ededed;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  
+  button {
+    margin: 0 10px
+  }
+}
+
+.alert-success {
+  background: $green;
+  border-radius: 3px;
+  color: #fff;
+  padding: 5px;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.dollar-sign {
+  background: #fff url("/images/dollar-sign.png") no-repeat;
+}
+
+.tbl-order {
+  
+  td:nth-child(1) {
+    width: 15%
+  }
+  
+  td:nth-child(2) {
+    width: 25%
+  }
+  
+  td:nth-child(3) {
+    width: 25%
+  }
+  
+  td:nth-child(4) {
+    width: 25%
+  }
+  
+  td:nth-child(5) {
+    width: 10%
+  }
+  
+}
+
+.no-msg {
+  color: $red;
+  margin: 1em 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.shipping-address {
+  padding: 10px;
+}
+
+.total {
+  color: $blue-purple;
+  margin-bottom: 10px;
+  
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cost {
+    color: $green;
+    font-size: 18px;
+  }
+  
+}

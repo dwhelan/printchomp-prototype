@@ -1,0 +1,183 @@
+section#content-main
+  .h1-header-main
+    h1 Statistics
+    
+  ul.tabs
+    li.active
+      a href="#week" data-toggle="tab" This Week      
+    li
+      a href="#month" data-toggle="tab" This Month
+    li
+      a href="#year" data-toggle="tab" This Year
+      
+  .tab-content
+    .tab-pane.active#week
+      = image_tag "stats.png", class: "stats-img";
+    .tab-pane#month
+      = image_tag "stats.png", class: "stats-img";
+    .tab-pane#year
+      = image_tag "stats.png", class: "stats-img";
+      
+  .h1-header-main.border-top
+    h1 Activity Feed    
+    
+  ul.tabs
+    li.active
+      a href="#quotes" data-toggle="tab" Quotes      
+    li
+      a href="#shipped" data-toggle="tab" Shipped
+    li
+      a href="#delivered" data-toggle="tab" Delivered
+    li
+      a href="#rejected" data-toggle="tab" Rejected
+      
+  .tab-content.no-padding
+    .tab-pane.active#quotes
+      table.tbl-order
+        tbody
+          tr
+            td 
+              .td-label Order
+              .td-desc 1234
+            td
+              .td-label Product
+              .td-desc Business Cards
+            td
+              .td-label Customer
+              .td-desc Diane Smith
+            td
+              .td-label Status
+              .td-desc Awaiting Response
+            td
+              a href="#"
+                = icon("fa-chevron-right")
+
+          tr
+            td 
+              .td-label Order
+              .td-desc 1238
+            td
+              .td-label Product
+              .td-desc Vinyl Stickers
+            td
+              .td-label Customer
+              .td-desc Diane Smith
+            td
+              .td-label Status
+              .td-desc Awaiting Response
+            td
+              a href="#"
+                = icon("fa-chevron-right")
+                                
+          tr
+            td 
+              .td-label Order
+              .td-desc 1240
+            td
+              .td-label Product
+              .td-desc Business Cards
+            td
+              .td-label Customer
+              .td-desc Eva Mendes
+            td
+              .td-label Status
+              .td-desc Awaiting Response
+            td
+              a href="#"
+                = icon("fa-chevron-right")
+              
+    .tab-pane#shipped
+      table.tbl-order 
+        tbody
+          tr
+            td 
+              .td-label Order
+              .td-desc 1218
+            td
+              .td-label Product
+              .td-desc Business Cards
+            td
+              .td-label Customer
+              .td-desc Diane Smith
+            td
+              .td-label Status
+              .td-desc Shipped
+            td
+              a href="#"
+                = icon("fa-chevron-right")
+      
+      
+    .tab-pane#delivered
+      table.tbl-order
+        tbody
+          tr
+            td 
+              .td-label Order
+              .td-desc 1200
+            td
+              .td-label Product
+              .td-desc Business Cards
+            td
+              .td-label Customer
+              .td-desc Diane Smith
+            td
+              .td-label Status
+              .td-desc Delivered
+            td
+              a href="#"
+                = icon("fa-chevron-right")
+      
+    .tab-pane#rejected
+      .no-msg
+        p You currently don't have any Rejected Quotes or Orders. Great job!
+          
+
+section#content-secondary
+  .h1-header-secondary
+    h1 Messages
+    
+  .msg-toggle
+    ul.nav
+      li.dropdown
+        a.dropdown-toggle data-toggle="dropdown" href="#" 
+          |
+            All 
+          span.caret
+          
+        ul.dropdown-menu
+          li
+            a href="#" All
+          li
+            a href="#" Quotes
+          li
+            a href="#" Orders  
+  
+  .msg
+    p.from Diane Smith
+    p.id Quote 1234
+    p.msg-body I've uploaded my artwork.
+    p.time 1 hr ago
+    
+    a.link href="#"
+      = icon("fa-chevron-right")
+      
+  .msg
+    p.from Diane Smith
+    p.id Quote 1238
+    p.msg-body 
+      | I've decided I'd like to pickup my order versus having it Shipped. Can you provide me with an updated price? Thanks
+    p.time 1 hr ago
+
+    a.link href="#"
+      = icon("fa-chevron-right")    
+      
+  .msg
+    p.from Eva Mendes
+    p.id Quote 1240
+    p.msg-body 
+      | We received our order and are extremely happy with the result. Thanks again. Diane
+    p.time 1 hr ago
+
+    a.link href="#"
+      = icon("fa-chevron-right")    
+      

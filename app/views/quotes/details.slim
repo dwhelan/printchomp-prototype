@@ -1,0 +1,142 @@
+section#tertiary
+  section#content-main
+    .h1-header-main.border-top
+      h1 Quote - Business Cards
+
+    .details-row
+      p.details-label.working-on-it Are you working on this?
+      p.details-desc 
+        = image_tag("yes-btn.png")
+
+    .details-row
+      p.details-label Requested
+      p.details-desc April 2, 2014
+  
+    .details-row
+      p.details-label Needed by
+      p.details-desc April 15, 2014
+  
+    .details-row
+      p.details-label Product
+      p.details-desc Business Cards
+  
+    .details-row
+      p.details-label Material
+      p.details-desc 12pt Glossy
+  
+    .details-row
+      p.details-label Size
+      p.details-desc 3.5" x 2.5"
+  
+    .details-row
+      p.details-label Quantity
+      p.details-desc 500
+  
+    .details-row
+      p.details-label Options
+      .details-desc 
+        ul
+          li 2-sided
+          li AQ Coating
+  
+    .details-row
+      p.details-label Ship to
+      p.details-desc Kitchener, Ontario, Canada
+  
+    .details-row
+      p.details-label Artwork
+      p.details-desc.warning No Artwork
+  
+    .details-row
+      p.details-label 
+        a.link href="#reject" data-toggle="modal" data-target="#reject" Reject
+      p.details-desc 
+
+
+  section#content-tertiary
+    .h1-header-tertiary
+      h1 Response
+      
+    form.response role="form"
+      .form-group
+        label Price
+        input.form-control type="text"
+      
+      .form-group
+        label Shipping 
+        input.form-control type="text"
+      
+      .form-group
+        label Sales Tax
+        input.form-control type="text"
+        
+      .total  
+        p Total
+        p.cost $55.00 /CAD
+      
+      .form-group
+        label Branch
+        select.form-control type="text"
+          option Select Branch
+          option Princhomp Milton
+      
+      .form-group
+        label Pickup Date
+        input.form-control type="text"
+
+    .text-center    
+      button.btn-green data-toggle="modal" data-target="#send-response" Send Response
+
+  section#content-secondary
+    .h1-header-secondary
+      h1 Messages
+  
+    .msg
+      p.from Diane Smith
+      p.id Quote 1234
+      p.msg-body I've uploaded my artwork.
+      p.time 1 hr ago
+    
+      a.link href="#"
+        = icon("fa-chevron-right")
+      
+    .msg
+      p.from Diane Smith
+      p.id Quote 1234
+      p.msg-body 
+        | I've decided I'd like to pickup my order versus having it Shipped. Can you provide me with an updated price? Thanks
+      p.time 1 hr ago
+
+      a.link href="#"
+        = icon("fa-chevron-right")    
+
+.modal.fade#send-response tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="sendResponse"
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close type="button" data-dismiss="modal" aria-hidden="true" &times;
+        h4 Send Response
+        
+      .modal-body
+        p.alert-success Your response was sent successfully
+        
+        p Would you like to save this price for future orders?
+      
+      .modal-footer
+        button.btn-green.btn-default type="button" data-dismiss="modal" aria-hidden="true" Yes
+        button.btn-red.btn-primary type="button" data-dismiss="modal" aria-hidden="true" No
+
+
+.modal.fade#reject tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="reject"
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close type="button" data-dismiss="modal" aria-hidden="true" &times;
+        h4 Reject Quote
+
+      .modal-body
+        p Are you sure you want to Reject this Quote?
+
+      .modal-footer
+        button.btn-green type="button" data-dismiss="modal" aria-hidden="true" Yes
+        button.btn-red type="button" data-dismiss="modal" aria-hidden="true" No

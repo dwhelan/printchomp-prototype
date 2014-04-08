@@ -1,0 +1,100 @@
+section#tertiary
+  section#content-main
+    .h1-header-main.border-top
+      h1 Order - Business Cards
+
+    .alert-success Order has been Approved.
+    
+    .details-row
+      p.details-label Printed By
+      p.details-desc Printchomp Milton
+
+    .details-row
+      p.details-label Order Placed
+      p.details-desc April 2, 2014
+  
+    .details-row
+      p.details-label Product
+      p.details-desc Business Cards
+  
+    .details-row
+      p.details-label Material
+      p.details-desc 12pt Glossy
+  
+    .details-row
+      p.details-label Size
+      p.details-desc 3.5" x 2.5"
+  
+    .details-row
+      p.details-label Quantity
+      p.details-desc 500
+  
+    .details-row
+      p.details-label Options
+      .details-desc 
+        ul
+          li 2-sided
+          li AQ Coating
+      
+    .details-row
+      p.details-label Email
+      p.details-desc diane.smith@gmail.com
+      
+    .details-row
+      p.details-label Phone
+      p.details-desc 123.456.7890
+  
+    .details-row
+      p.details-label Artwork
+      p.details-desc 
+        a href="#" Business Card.pdf
+    
+    .details-row
+      p.details-label 
+        a.link href="#" Download to CSV
+      p.details-desc 
+    
+
+
+  section#content-tertiary
+    .h1-header-tertiary
+      h1 Actions
+      
+    .shipping-address  
+      h2 Shipping Address
+      address
+        p 1 King St. 
+        p Waterloo, Ontario Canada
+        p N2M 0A1
+      
+    form.response role="form"
+      .form-group
+        label Tracking Number
+        input.form-control type="text"
+
+    .text-center    
+      button.btn-green data-toggle="modal" data-target="#send-response" Save
+
+  section#content-secondary
+    .h1-header-secondary
+      h1 Messages
+  
+    .msg
+      p.from Diane Smith
+      p.id Quote 1234
+      p.msg-body I've uploaded my artwork.
+      p.time 1 hr ago
+    
+      a.link href="#"
+        = icon("fa-chevron-right")
+      
+    .msg
+      p.from Diane Smith
+      p.id Quote 1234
+      p.msg-body 
+        | I've decided I'd like to pickup my order versus having it Shipped. Can you provide me with an updated price? Thanks
+      p.time 1 hr ago
+
+      a.link href="#"
+        = icon("fa-chevron-right")    
+        

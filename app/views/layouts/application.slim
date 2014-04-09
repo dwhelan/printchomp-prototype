@@ -30,16 +30,16 @@ html
           nav#navigation 
             ul
               li
-                = link_to "Dashboard", root_path, class: "active"
+                = active_link_to "Dashboard", root_path
               li
-                = link_to "Orders", orders_path
+                = active_link_to "Orders", orders_path
               li
-                = link_to "Quotes", quotes_path
+                = active_link_to "Quotes", quotes_path
               li
-                = link_to "Products", products_path
+                = active_link_to "Products", products_path
               li
-                = link_to "Offers", offers_path
+                = active_link_to "Offers", offers_path
               li
-                = link_to "Statistics", statistics_path
+                = active_link_to "Statistics", statistics_path
         
         == yield

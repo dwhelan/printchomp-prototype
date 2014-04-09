@@ -1,17 +1,18 @@
 PrintchompPrototype::Application.routes.draw do
-  get "offers/index"
 
-  get "statistics/index"
-
-  get "products/index"
-
+  get "home/index"
+  
   get "quotes/index"
   get "quotes/details"
 
   get "orders/index"
   get "orders/details"
+  
+  get "offers/index"
 
-  get "home/index"
+  get "statistics/index"
+
+  get "products/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -65,14 +66,11 @@ PrintchompPrototype::Application.routes.draw do
   root :to => 'home#index'
   
   resources :quotes
+  
   resources :orders
   resources :products
   resources :offers
   resources :statistics
-  
-  #map.quote_details '/quotes/details', :controller => 'quotes', :action => 'details'
-  
-  #match 'quotes/details' => 'catalog#purchase', :as => :purchase
 
   # See how all your routes lay out with "rake routes"
 

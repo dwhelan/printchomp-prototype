@@ -4,16 +4,16 @@ section#content-main
     
   ul.tabs
     li.active
-      a href="#quotes" data-toggle="tab" Quotes      
+      a href="#awaiting" data-toggle="tab" Awaiting Response     
     li
-      a href="#shipped" data-toggle="tab" Shipped
+      a href="#quoted" data-toggle="tab" Quoted
     li
-      a href="#delivered" data-toggle="tab" Delivered
+      a href="#cancelled" data-toggle="tab" Cancelled
     li
       a href="#rejected" data-toggle="tab" Rejected
       
   .tab-content.no-padding
-    .tab-pane.active#quotes
+    .tab-pane.active#awaiting
       table.tbl-order
         tbody
           tr
@@ -30,9 +30,9 @@ section#content-main
               .td-label Status
               .td-desc Awaiting Response
             td.text-right
-              a href="#"
-                i.fa.fa-angle-right.fa-2x
-
+              = link_to "Quote", quotes_details_path, class: "coa-link"  
+                /i.fa.fa-angle-right.fa-2x
+                
           tr
             td 
               .td-label Order
@@ -47,8 +47,8 @@ section#content-main
               .td-label Status
               .td-desc Awaiting Response
             td.text-right
-              a href="#"
-                i.fa.fa-angle-right.fa-2x
+              = link_to "Quote", quotes_details_path, class: "coa-link" 
+                /i.fa.fa-angle-right.fa-2x
                                 
           tr
             td 
@@ -64,10 +64,10 @@ section#content-main
               .td-label Status
               .td-desc Awaiting Response
             td.text-right
-              a href="#"
-                i.fa.fa-angle-right.fa-2x
+              = link_to "Quote", quotes_details_path, class: "coa-link"  
+                /i.fa.fa-angle-right.fa-2x
               
-    .tab-pane#shipped
+    .tab-pane#quoted
        table.tbl-order
           tbody
             tr
@@ -82,12 +82,12 @@ section#content-main
                 .td-desc Diane Smith
               td
                 .td-label Status
-                .td-desc Shipped
+                .td-desc Quoted
               td.text-right
-                a href="#"
-                  i.fa.fa-angle-right.fa-2x
+                = link_to "Details", quotes_details_path 
+                  /i.fa.fa-angle-right.fa-2x
                   
-    .tab-pane#delivered
+    .tab-pane#cancelled
       table.tbl-order
         tbody
           tr
@@ -102,10 +102,10 @@ section#content-main
               .td-desc Diane Smith
             td
               .td-label Status
-              .td-desc Delivered
+              .td-desc Cancelled
             td.text-right
-              a href="#"
-                i.fa.fa-angle-right.fa-2x
+              = link_to "Details", quotes_details_path 
+                /i.fa.fa-angle-right.fa-2x
                 
     .tab-pane#rejected
       .no-msg

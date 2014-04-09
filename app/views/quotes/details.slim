@@ -3,54 +3,57 @@ section#tertiary
     .h1-header-main.border-top
       h1 Quote - Business Cards
 
-    .details-row
-      p.details-label.working-on-it Are you working on this?
-      p.details-desc 
-        = image_tag("yes-btn.png")
+    .quote-details
+      .details-row.working-on-it
+        p.details-label Are you working on this?
+        p.details-desc.btn-toggle.no
+          = image_tag("no-btn.png")
+        p.details-desc.btn-toggle.yes.hide
+          = image_tag("yes-btn.png")
 
-    .details-row
-      p.details-label Requested
-      p.details-desc April 2, 2014
+      .details-row
+        p.details-label Requested
+        p.details-desc April 2, 2014
   
-    .details-row
-      p.details-label Needed by
-      p.details-desc April 15, 2014
+      .details-row
+        p.details-label Needed by
+        p.details-desc April 15, 2014
   
-    .details-row
-      p.details-label Product
-      p.details-desc Business Cards
+      .details-row
+        p.details-label Product
+        p.details-desc Business Cards
   
-    .details-row
-      p.details-label Material
-      p.details-desc 12pt Glossy
+      .details-row
+        p.details-label Material
+        p.details-desc 12pt Glossy
   
-    .details-row
-      p.details-label Size
-      p.details-desc 3.5" x 2.5"
+      .details-row
+        p.details-label Size
+        p.details-desc 3.5" x 2.5"
   
-    .details-row
-      p.details-label Quantity
-      p.details-desc 500
+      .details-row
+        p.details-label Quantity
+        p.details-desc 500
   
-    .details-row
-      p.details-label Options
-      .details-desc 
-        ul
-          li 2-sided
-          li AQ Coating
+      .details-row
+        p.details-label Options
+        .details-desc 
+          ul
+            li 2-sided
+            li AQ Coating
   
-    .details-row
-      p.details-label Ship to
-      p.details-desc Kitchener, Ontario, Canada
+      .details-row
+        p.details-label Ship to
+        p.details-desc Kitchener, Ontario, Canada
   
-    .details-row
-      p.details-label Artwork
-      p.details-desc.warning No Artwork
+      .details-row
+        p.details-label Artwork
+        p.details-desc.warning No Artwork
   
-    .details-row
-      p.details-label 
-        a.link href="#reject" data-toggle="modal" data-target="#reject" Reject
-      p.details-desc 
+      .details-row
+        p.details-label 
+          a.link href="#reject" data-toggle="modal" data-target="#reject" Reject
+        p.details-desc 
 
 
   section#content-tertiary
@@ -60,19 +63,19 @@ section#tertiary
     form.response role="form"
       .form-group
         label Price
-        input.form-control type="text"
+        input.form-control type="text" id="price"
       
       .form-group
         label Shipping 
-        input.form-control type="text"
+        input.form-control type="text" id="shipping"
       
       .form-group
         label Sales Tax
-        input.form-control type="text"
+        input.form-control type="text" id="tax"
         
       .total  
         p Total
-        p.cost $55.00 /CAD
+        p.cost $0.00 /CAD
       
       .form-group
         label Branch
@@ -85,7 +88,7 @@ section#tertiary
         input.form-control type="text"
 
     .text-center    
-      button.btn-green data-toggle="modal" data-target="#send-response" Send Response
+      button#save-response.btn-green data-toggle="modal" data-target="#send-response" Send Response
 
   section#content-secondary
     .h1-header-secondary
@@ -98,7 +101,7 @@ section#tertiary
       p.time 1 hr ago
     
       a.link href="#"
-        = icon("fa-chevron-right")
+        i.fa.fa-angle-right.fa-2x
       
     .msg
       p.from Diane Smith
@@ -108,7 +111,7 @@ section#tertiary
       p.time 1 hr ago
 
       a.link href="#"
-        = icon("fa-chevron-right")    
+        i.fa.fa-angle-right.fa-2x
 
 .modal.fade#send-response tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="sendResponse"
   .modal-dialog
@@ -121,6 +124,24 @@ section#tertiary
         p.alert-success Your response was sent successfully
         
         p Would you like to save this price for future orders?
+        
+        .modal-details
+        
+        .details-row
+          .details-label Price
+          .details-desc.modal-price 
+          
+        .details-row
+          .details-label Shipping
+          .details-desc.modal-shipping
+          
+        .details-row
+          .details-label Sales Tax
+          .details-desc.modal-tax  
+          
+        .details-row
+          .details-label Total
+          .details-desc.modal-total  
       
       .modal-footer
         button.btn-green.btn-default type="button" data-dismiss="modal" aria-hidden="true" Yes

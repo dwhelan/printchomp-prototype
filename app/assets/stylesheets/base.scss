@@ -47,8 +47,7 @@ address {
     .progress {
       background: lighten($blue-purple, 10%);
       height: 12px;
-      margin: 0 auto 0.5em auto;
-      width: 95%;
+      margin: 0 1em 0.5em 1em;
       
       .progress-bar {
         background: $blue;
@@ -110,7 +109,7 @@ address {
       border-bottom: 1px solid #6b7383;
       color: #fff;
       display: block;
-      padding: 0.6em 0.4em;
+      padding: 0.6em 1em;
       
       &:hover {
         background: darken($blue-purple, 8%);
@@ -118,7 +117,7 @@ address {
       }
       
       &.active {
-        background: darken($blue-purple, 8%) url("vertical-arrow.png") right no-repeat;
+        background: darken($blue-purple, 8%) url("vertical-arrow.png") 205px 7px no-repeat;
       }
     }
   }
@@ -158,7 +157,7 @@ address {
     color: $blue-purple;
     font-size: 18px;
     margin: 0;
-    padding: 10px;
+    padding: 10px 20px;
   }
   
   &.border-top {
@@ -172,7 +171,7 @@ address {
     color: $blue-purple;
     font-size: 18px;
     margin: 0;
-    padding: 10px;
+    padding: 10px 20px;
   }
 }
 
@@ -182,7 +181,7 @@ address {
     color: $blue-purple;
     font-size: 18px;
     margin: 0;
-    padding: 10px;
+    padding: 10px 20px;
   }
 }
 
@@ -222,7 +221,7 @@ address {
 }
 
 .tab-content {
-  padding: 10px;
+  padding: 10px 20px;
   
   &.no-padding {
     padding: 0;
@@ -236,7 +235,7 @@ table {
     border-bottom: 1px solid lighten($blue, 33%);
   
     td {
-      padding: 10px;
+      padding: 10px 20px;
       
       .td-label {
         color: lighten($blue-purple, 35%);
@@ -248,7 +247,7 @@ table {
 
 .msg {
   border-bottom: 1px solid lighten($blue, 22%);
-  padding: 10px;
+  padding: 10px 20px;
   position: relative;
   
   p {
@@ -277,7 +276,11 @@ table {
   .link {
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 6px;
+  }
+  
+  i {
+    font-weight: bold;
   }
   
 }
@@ -288,7 +291,7 @@ table {
   
   .nav > li > a {
     color: $blue;
-    padding-left: 10px;
+    padding-left: 20px;
   }
   
   .nav > li > a:hover, 
@@ -324,10 +327,12 @@ table {
     font-weight: normal;
     @include make-md-column(5);
     margin: 0;
-    padding: 10px;
+    padding: 10px 20px;
     text-align: left;
-    
-    &.working-on-it {
+  }
+  
+  &.working-on-it {
+    .details-label {
       padding-top: 15px;
     }
   }
@@ -350,7 +355,7 @@ table {
 }  
 
 .response {
-  padding: 10px;
+  padding: 10px 20px;
   
   label {
     color: $blue-purple;
@@ -398,6 +403,7 @@ table {
   padding: 5px 10px;
   
   .close {
+    color: $blue;
     margin-top: 10px;
   }
 }
@@ -455,6 +461,11 @@ table {
     width: 10%
   }
   
+  i {
+    color: $blue;
+    font-weight: bold;
+  }
+  
 }
 
 .no-msg {
@@ -482,4 +493,33 @@ table {
     font-size: 18px;
   }
   
+}
+
+.modal-body {
+  
+  .details-row {
+    border: 0;
+    
+    .details-label,
+    .details-desc {
+      padding: 2px 0;
+    }
+    
+    &:nth-child(1) {
+      display: none;
+    }
+    
+    &:last-child {
+      display: none;
+    }
+  }
+  
+}
+
+.btn-toggle {
+  cursor: pointer;
+}
+
+.content {
+  padding: 10px 20px;
 }

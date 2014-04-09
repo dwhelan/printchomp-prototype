@@ -69,6 +69,10 @@ PrintchompPrototype::Application.routes.draw do
   resources :products
   resources :offers
   resources :statistics
+  
+  #map.quote_details '/quotes/details', :controller => 'quotes', :action => 'details'
+  
+  #match 'quotes/details' => 'catalog#purchase', :as => :purchase
 
   # See how all your routes lay out with "rake routes"
 

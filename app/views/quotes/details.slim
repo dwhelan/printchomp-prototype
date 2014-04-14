@@ -63,19 +63,19 @@ section#tertiary
     form.response role="form"
       .form-group
         label Price
-        input.form-control type="text" id="price"
+        input.form-control.dollar-sign type="text" id="price" value="50.00"
       
       .form-group
         label Shipping 
-        input.form-control type="text" id="shipping"
+        input.form-control.dollar-sign type="text" id="shipping" value="0.00"
       
       .form-group
         label Sales Tax
-        input.form-control type="text" id="tax"
+        input.form-control.dollar-sign type="text" id="tax" value="5.00"
         
       .total  
         p Total
-        p.cost $0.00 /CAD
+        p.cost $55.00 /CAD
       
       .form-group
         label Branch
@@ -85,7 +85,7 @@ section#tertiary
       
       .form-group
         label Pickup Date
-        input.form-control type="text"
+        input.form-control type="text" value="April 25, 2014"
 
     .text-center    
       button#save-response.btn-green data-toggle="modal" data-target="#send-response" Send Response

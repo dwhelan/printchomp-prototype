@@ -80,4 +80,16 @@ $(function() {
   });
   
   
+  $('.response').on('keyup', function() {
+    
+    var price = $('#price').val();
+    var shipping = $('#shipping').val();
+    var tax = $('#tax').val();
+    
+    var totalPrice = (parseFloat(price)*100 + parseFloat(shipping)*100 + parseFloat(tax)*100)/100;
+
+    //$('.cost').html("$" + totalPrice + "/CAD");  
+    
+  });
+  
 });

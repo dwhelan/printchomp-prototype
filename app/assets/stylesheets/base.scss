@@ -439,7 +439,8 @@ table {
 }
 
 .dollar-sign {
-  background: #fff url("/images/dollar-sign.png") no-repeat;
+  background: #fff url("dollar-sign.png") 5px -1px no-repeat;
+  padding-left: 35px;
 }
 
 .tbl-order {

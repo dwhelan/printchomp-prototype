@@ -81,7 +81,7 @@ section#tertiary
         label Branch
         select.form-control type="text"
           option Select Branch
-          option Princhomp Milton
+          option Branch Name Goes Here
       
       .form-group
         label Pickup Date
@@ -92,26 +92,21 @@ section#tertiary
 
   section#content-secondary
     .h1-header-secondary
-      h1 Messages
+      h1 Messages for Quote 1234
   
     .msg
       p.from Diane Smith
-      p.id Quote 1234
       p.msg-body I've uploaded my artwork.
       p.time 1 hr ago
-    
-      a.link href="#"
-        i.fa.fa-angle-right.fa-2x
       
     .msg
       p.from Diane Smith
-      p.id Quote 1234
       p.msg-body 
         | I've decided I'd like to pickup my order versus having it Shipped. Can you provide me with an updated price? Thanks
       p.time 1 hr ago
-
-      a.link href="#"
-        i.fa.fa-angle-right.fa-2x
+        
+    .type-msg
+      input.form-control type="text" placeholder="Type your message here"
 
 .modal.fade#send-response tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="sendResponse"
   .modal-dialog
@@ -125,23 +120,48 @@ section#tertiary
         
         p Would you like to save this price for future orders?
         
-        .modal-details
+        .details-row
+          p.details-label Product
+          p.details-desc Business Cards
+
+        .details-row
+          p.details-label Material
+          p.details-desc 12pt Glossy
+
+        .details-row
+          p.details-label Size
+          p.details-desc 3.5" x 2.5"
+
+        .details-row
+          p.details-label Quantity
+          p.details-desc 500
+
+        .details-row
+          p.details-label Options
+          .details-desc 
+            ul
+              li 2-sided
+              li AQ Coating
+
+        .details-row
+          p.details-label Ship to
+          p.details-desc Kitchener, Ontario, Canada
         
         .details-row
           .details-label Price
-          .details-desc.modal-price 
+          .details-desc.modal-price $50.00
           
         .details-row
           .details-label Shipping
-          .details-desc.modal-shipping
+          .details-desc.modal-shipping $0.00
           
         .details-row
           .details-label Sales Tax
-          .details-desc.modal-tax  
+          .details-desc.modal-tax $5.00
           
         .details-row
           .details-label Total
-          .details-desc.modal-total  
+          .details-desc.modal-total $55.00/CAD  
       
       .modal-footer
         button.btn-green.btn-default type="button" data-dismiss="modal" aria-hidden="true" Yes
@@ -157,6 +177,33 @@ section#tertiary
 
       .modal-body
         p Are you sure you want to Reject this Quote?
+        
+        .details-row
+          p.details-label Product
+          p.details-desc Business Cards
+
+        .details-row
+          p.details-label Material
+          p.details-desc 12pt Glossy
+
+        .details-row
+          p.details-label Size
+          p.details-desc 3.5" x 2.5"
+
+        .details-row
+          p.details-label Quantity
+          p.details-desc 500
+
+        .details-row
+          p.details-label Options
+          .details-desc 
+            ul
+              li 2-sided
+              li AQ Coating
+
+        .details-row
+          p.details-label Ship to
+          p.details-desc Kitchener, Ontario, Canada
 
       .modal-footer
         button.btn-green type="button" data-dismiss="modal" aria-hidden="true" Yes

@@ -44,13 +44,13 @@ $(function() {
   })
   
   
-  var quoteDetails = $('.quote-details').html();
+  //var quoteDetails = $('.quote-details').html();
   
-  $('#reject .modal-body').append(quoteDetails);
-  $('#reject .working-on-it').hide();
+  //$('#reject .modal-body').append(quoteDetails);
+  //$('#reject .working-on-it').hide();
   
-  $('#send-response .modal-body').append(quoteDetails);
-  $('#send-response .working-on-it').hide();
+  //$('#send-response .modal-body').append(quoteDetails);
+  //$('#send-response .working-on-it').hide();
   
   
   $('.btn-toggle').on("click", function() {

@@ -65,7 +65,7 @@ address {
     
     .alert-success {
       border-radius: 0;
-      padding: 5px 10px;
+      padding: 10px 20px;
     }
   }
   
@@ -115,12 +115,13 @@ address {
       padding: 0.6em 1em;
       
       &:hover {
-        background: darken($blue-purple, 8%) url("vertical-arrow.png") 205px 7px no-repeat;
+        /*background: darken($blue-purple, 8%) url("vertical-arrow.png") 205px 7px no-repeat;*/
+        background: darken($blue-purple, 8%);
         text-decoration: none;
       }
       
       &.active {
-        background: darken($blue-purple, 8%) url("vertical-arrow.png") 205px 7px no-repeat;
+        background: darken($blue-purple, 8%);
       }
     }
   }
@@ -512,10 +513,7 @@ table {
     &:nth-child(1) {
       display: none;
     }
-    
-    &:last-child {
-      display: none;
-    }
+
   }
   
 }
@@ -530,4 +528,14 @@ table {
 
 .coa-link {
   color: $red;
+}
+
+.type-msg {
+  margin: 15px 20px 0 20px;
+}
+
+.modal-total {
+  color: $green;
+  font-size: 18px;
+  font-weight: bold;
 }
